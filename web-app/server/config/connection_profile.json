@@ -1,0 +1,41 @@
+{
+    "name": "Org1MSPprofile",
+    "description": "Network on IBP v2",
+    "version": "1.0.0",
+    "client": {
+        "organization": "Org1MSP"
+    },
+    "organizations": {
+        "Org1MSP": {
+            "mspid": "Org1MSP",
+            "certificateAuthorities": [
+                "project2-org1ca-ca.lsu-dev-0b8a4e8de101bcbaf4eafc441eda83b3-0000.us-south.containers.appdomain.cloud:443"
+            ],
+            "peers": [
+                "project2-peerorg1-peer.lsu-dev-0b8a4e8de101bcbaf4eafc441eda83b3-0000.us-south.containers.appdomain.cloud:443"
+            ]
+        }
+    },
+    "peers": {
+        "project2-peerorg1-peer.lsu-dev-0b8a4e8de101bcbaf4eafc441eda83b3-0000.us-south.containers.appdomain.cloud:443": {
+            "url": "grpcs://project2-peerorg1-peer.lsu-dev-0b8a4e8de101bcbaf4eafc441eda83b3-0000.us-south.containers.appdomain.cloud:443",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICDDCCAbKgAwIBAgIUNWJGGEo+TUypHxT29gJfg26ECQ0wCgYIKoZIzj0EAwIw\nZDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRUwEwYDVQQDEwxvcmcxY2Et\ndGxzY2EwHhcNMjEwNTMwMTIzMDAwWhcNMzYwNTI2MTIzMDAwWjBkMQswCQYDVQQG\nEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExFDASBgNVBAoTC0h5cGVybGVk\nZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxFTATBgNVBAMTDG9yZzFjYS10bHNjYTBZMBMG\nByqGSM49AgEGCCqGSM49AwEHA0IABMw3rvK0byxMZmsJ48iG+m8aPpFSEAuyl1NV\npAb/ipaD/QpErA5RGOFYBidk6bFifirYP73Tx/krM54wBnuaDFyjQjBAMA4GA1Ud\nDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBR5iWp5EMMzmmj4\nuPD2CCBvrss4vDAKBggqhkjOPQQDAgNIADBFAiEA1wZzKmhlFJJE6l9DLNlEvuor\nK3PS10O7zalW1vLFiLICIGQP5ngpSA/lSlesN7g0zErEZRnPmjVygQiBaj5DthVo\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "project2-peerorg1-peer.lsu-dev-0b8a4e8de101bcbaf4eafc441eda83b3-0000.us-south.containers.appdomain.cloud"
+            }
+        }
+    },
+    "certificateAuthorities": {
+        "project2-org1ca-ca.lsu-dev-0b8a4e8de101bcbaf4eafc441eda83b3-0000.us-south.containers.appdomain.cloud:443": {
+            "url": "https://project2-org1ca-ca.lsu-dev-0b8a4e8de101bcbaf4eafc441eda83b3-0000.us-south.containers.appdomain.cloud:443",
+            "caName": "ca",
+            "tlsCACerts": {
+                "pem": [
+                    "-----BEGIN CERTIFICATE-----\nMIIDeTCCAx+gAwIBAgIRAKEbDTohllMI1fz10hCl1MQwCgYIKoZIzj0EAwIwgckx\nCzAJBgNVBAYTAlVTMRcwFQYDVQQIEw5Ob3J0aCBDYXJvbGluYTEPMA0GA1UEBxMG\nRHVyaGFtMQwwCgYDVQQKEwNJQk0xEzARBgNVBAsTCkJsb2NrY2hhaW4xbTBrBgNV\nBAMTZHByb2plY3QyLW9yZzFjYS1jYS5sc3UtZGV2LTBiOGE0ZThkZTEwMWJjYmFm\nNGVhZmM0NDFlZGE4M2IzLTAwMDAudXMtc291dGguY29udGFpbmVycy5hcHBkb21h\naW4uY2xvdWQwHhcNMjEwNTMwMTIzNTA0WhcNMzEwNTI4MTIzNTA0WjCByTELMAkG\nA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMQ8wDQYDVQQHEwZEdXJo\nYW0xDDAKBgNVBAoTA0lCTTETMBEGA1UECxMKQmxvY2tjaGFpbjFtMGsGA1UEAxNk\ncHJvamVjdDItb3JnMWNhLWNhLmxzdS1kZXYtMGI4YTRlOGRlMTAxYmNiYWY0ZWFm\nYzQ0MWVkYTgzYjMtMDAwMC51cy1zb3V0aC5jb250YWluZXJzLmFwcGRvbWFpbi5j\nbG91ZDBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABOaEdGTbSXWIAquCdsabxNoj\n14/aa9855ifNjmyIEYhP1Ww6s9DoJ0yBOJLwO1vuQixjqX5TfJSg5ecpvASFLOij\ngeUwgeIwgd8GA1UdEQSB1zCB1IJkcHJvamVjdDItb3JnMWNhLWNhLmxzdS1kZXYt\nMGI4YTRlOGRlMTAxYmNiYWY0ZWFmYzQ0MWVkYTgzYjMtMDAwMC51cy1zb3V0aC5j\nb250YWluZXJzLmFwcGRvbWFpbi5jbG91ZIJscHJvamVjdDItb3JnMWNhLW9wZXJh\ndGlvbnMubHN1LWRldi0wYjhhNGU4ZGUxMDFiY2JhZjRlYWZjNDQxZWRhODNiMy0w\nMDAwLnVzLXNvdXRoLmNvbnRhaW5lcnMuYXBwZG9tYWluLmNsb3VkMAoGCCqGSM49\nBAMCA0gAMEUCIQCkTc1CnJ+wypfzbRMSenGWgTt/KARc+FR/h2ThZY+ffgIgdPlm\nd2utsDBTC7UaxUWBBgBQKt0ciAwy72txDwqQpME=\n-----END CERTIFICATE-----\n"
+                ]
+            }
+        }
+    }
+}
